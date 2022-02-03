@@ -21,20 +21,19 @@
                                     <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
                                     <p class="text-center small">Enter your username & password to login</p>
                                 </div>
-
                                 <form class="row g-3" method="post" action=" <?php echo base_url('Auth/siswa') ?>">
                                     <div class="col-12">
-                                        <label for="username" class="form-label">Username</label>
+                                        <label for="nisn" class="form-label">Nisn</label>
                                         <div class="form-group">
-                                            <input type="text" name="username" class="form-control" id="username">
-                                            <?php echo form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
+                                            <input type="text" name="nisn" class="form-control" id="nisn">
+                                            <?php echo form_error('nisn', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-                                        <label for="yourPassword" class="form-label">Password</label>
-                                        <input type="password" name="password" class="form-control" id="yourPassword">
-                                        <div class="invalid-feedback">Please enter your password!</div>
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" name="password" class="form-control" id="password">
+                                        <?php echo form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
 
 
