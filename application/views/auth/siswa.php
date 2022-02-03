@@ -8,7 +8,7 @@
 
                         <div class="d-flex justify-content-center py-4">
                             <a href="index.html" class="logo d-flex align-items-center w-auto">
-                                <img src="<?= base_url(); ?>assets/img/logo.png" alt="">
+                                <img src="assets/img/logo.png" alt="">
                                 <span class="d-none d-lg-block">NiceAdmin</span>
                             </a>
                         </div><!-- End Logo -->
@@ -22,19 +22,18 @@
                                     <p class="text-center small">Enter your username & password to login</p>
                                 </div>
 
-                                <form class="row g-3 needs-validation" novalidate>
-
+                                <form class="row g-3" method="post" action=" <?php echo base_url('Auth/siswa') ?>">
                                     <div class="col-12">
-                                        <label for="yourUsername" class="form-label">Username</label>
-                                        <div class="input-group has-validation">
-                                            <input type="text" name="username" class="form-control" id="yourUsername" required>
-                                            <div class="invalid-feedback">Please enter your username.</div>
+                                        <label for="username" class="form-label">Username</label>
+                                        <div class="form-group">
+                                            <input type="text" name="username" class="form-control" id="username">
+                                            <?php echo form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
                                         <label for="yourPassword" class="form-label">Password</label>
-                                        <input type="password" name="password" class="form-control" id="yourPassword" required>
+                                        <input type="password" name="password" class="form-control" id="yourPassword">
                                         <div class="invalid-feedback">Please enter your password!</div>
                                     </div>
 
